@@ -1,9 +1,7 @@
-export default async function Home() {
-  const result = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/area`, {
-    method: 'GET',
-  });
+import { getData } from '@/src/shared/utils/api';
 
-  const { data } = await result.json();
+export default async function Home() {
+  const { data } = await getData('/api/area');
 
   return (
     <div>
