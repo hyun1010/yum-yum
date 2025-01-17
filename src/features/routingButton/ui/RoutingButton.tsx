@@ -44,19 +44,22 @@ export default function RoutingButton({
   };
 
   return (
-    <div className="flex flex-col items-center gap-1" onClick={handleClick}>
+    <div
+      className="flex flex-col items-center gap-1 cursor-pointer"
+      onClick={handleClick}
+    >
       {type !== 'onlyLabel' && (
-        <div className="relative h-16 w-16 bg-gray-100 rounded-md border border-gray-100">
-          {/* <Image
+        <div className="relative h-16 w-16 rounded-lg bg-gray-100 border border-gray-50">
+          <Image
             fill
             src={src}
             alt="아이콘"
-            className="object-contain w-full h-full"
-          /> */}
+            className="object-contain w-full h-full p-3"
+          />
         </div>
       )}
       {type !== 'onlyIcon' && (
-        <div className="text-md text-gray-900">{label}</div>
+        <div className="text-sm text-gray-900 text-center">{label}</div>
       )}
     </div>
   );
