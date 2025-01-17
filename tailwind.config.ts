@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         'noto-sans': ['var(--noto-sans)', 'dotum', 'system-ui', 'sans-serif'],
-        'han-sans': ['var(--han-sans)', 'dotum', 'system-ui', 'sans-serif'],
+        'do-hyeon': ['var(--do-hyeon)', 'dotum', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -19,6 +19,19 @@ const config: Config = {
       },
       colors: {
         primary: '#f97316',
+        gray: {
+          '50': '#fafafa',
+          '100': '#efefef',
+          '200': '#dcdcdc',
+          '300': '#bdbdbd',
+          '400': '#989898',
+          '500': '#7c7c7c',
+          '600': '#656565',
+          '700': '#525252',
+          '800': '#464646',
+          '900': '#3d3d3d',
+          '950': '#292929',
+        },
       },
     },
   },

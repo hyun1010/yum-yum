@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
-import { Black_Han_Sans, Gugi, Noto_Sans_KR } from 'next/font/google';
+import { Do_Hyeon, Noto_Sans_KR } from 'next/font/google';
 import './globals.css';
 import { Layout } from '@/src/widgets/layout';
 
-const han_sans = Black_Han_Sans({
+const do_hyeon = Do_Hyeon({
   subsets: ['latin'],
   weight: ['400'],
-  variable: '--han-sans',
+  variable: '--do-hyeon',
 });
 const noto_sans = Noto_Sans_KR({
   subsets: ['latin'],
@@ -14,8 +14,8 @@ const noto_sans = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
-  title: 'YumYum',
-  description: 'YumYum app',
+  title: '얌,얌',
+  description: '얌,얌 app',
 };
 
 export default function RootLayout({
@@ -25,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body lang="en" className={`${noto_sans.variable} ${han_sans.variable}`}>
+      <body lang="en" className={`${noto_sans.variable} ${do_hyeon.variable}`}>
         <Layout>{children}</Layout>
       </body>
     </html>
