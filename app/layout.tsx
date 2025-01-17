@@ -1,9 +1,17 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Black_Han_Sans, Gugi, Noto_Sans_KR } from 'next/font/google';
 import './globals.css';
 import { Layout } from '@/src/widgets/layout';
 
-const inter = Inter({ subsets: ['latin'] });
+const han_sans = Black_Han_Sans({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--han-sans',
+});
+const noto_sans = Noto_Sans_KR({
+  subsets: ['latin'],
+  variable: '--noto-sans',
+});
 
 export const metadata: Metadata = {
   title: 'YumYum',
@@ -17,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body lang="en" className={`${noto_sans.variable} ${han_sans.variable}`}>
         <Layout>{children}</Layout>
       </body>
     </html>
