@@ -2,17 +2,18 @@
 import React from 'react';
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 
-const containerStyle = {
-  width: '400px',
-  height: '400px',
-};
-
 const defaultCenter = {
   lat: 37.5665,
   lng: 126.9788,
 };
 
-function Map() {
+function LoactionMap({
+  width = '100%',
+  height = '400px',
+}: {
+  width?: string;
+  height?: string;
+}) {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY!,
@@ -65,7 +66,10 @@ function Map() {
 
   return isLoaded ? (
     <GoogleMap
-      mapContainerStyle={containerStyle}
+      mapContainerStyle={{
+        width: width,
+        height: height,
+      }}
       center={defaultCenter} // 기본 위치를 서울로 설정
       zoom={10}
       onLoad={onLoad}
@@ -79,4 +83,4 @@ function Map() {
   );
 }
 
-export default React.memo(Map);
+export default React.memo(LoactionMap);

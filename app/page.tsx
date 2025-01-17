@@ -1,15 +1,20 @@
 import { getData } from '@/src/shared/utils/api';
-import { Map } from '@/src/widgets';
+import { LocationMap } from '@/src/widgets/locationMap';
 
 export default async function Home() {
   const { data } = await getData('/api/area');
 
   return (
-    <div>
-      {data.map((item: any) => (
-        <div key={item.id}>{item.name}</div>
-      ))}
-      <Map />
-    </div>
+    <>
+      <section className="bg-white p-4 rounded-lg shadow-md">
+        <h2 className="text-lg font-semibold mb-2">섹션 1</h2>
+        <p className="text-sm text-gray-700">섹션 1 콘텐츠</p>
+      </section>
+      <section className="bg-white p-4 rounded-lg shadow-md">
+        <h2 className="text-lg font-semibold mb-2">섹션 2</h2>
+        <p className="text-sm text-gray-700">섹션 2 콘텐츠</p>
+      </section>
+      <LocationMap />
+    </>
   );
 }
