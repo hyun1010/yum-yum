@@ -7,7 +7,7 @@ const defaultCenter = {
   lng: 126.9788,
 };
 
-function LoactionMap({
+function Map({
   width = '100%',
   height = '400px',
 }: {
@@ -83,4 +83,4 @@ function LoactionMap({
   );
 }
 
-export default React.memo(LoactionMap);
+export default React.memo(Map);
