@@ -1,4 +1,3 @@
-import React from 'react';
 import { HomeMenu } from '../widgets/home';
 import { Map } from '../widgets/map';
 
