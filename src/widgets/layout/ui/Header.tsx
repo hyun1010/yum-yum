@@ -37,11 +37,9 @@ export default function Header() {
       <div className="container">
         <div className="relative -mx-4 flex items-center justify-between">
           <Logo />
-          <div className="flex w-full items-center justify-between px-4">
-            <NavBar />
-            <Account />
-            <ThemeToggle />
-          </div>
+          <NavBar />
+          <Account />
+          <ThemeToggle />
         </div>
       </div>
     </header>
