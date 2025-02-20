@@ -14,8 +14,8 @@ const noto_sans = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
-  title: '얌,얌',
-  description: '얌,얌 app',
+  title: 'example',
+  description: 'example',
 };
 
 export default function RootLayout({

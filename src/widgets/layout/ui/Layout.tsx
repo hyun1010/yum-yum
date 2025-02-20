@@ -1,14 +1,16 @@
 import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
-import MainWrap from './MainWrap';
+import { Providers } from '@/app/providers';
+import ScrollToTop from '@/components/ScrollToTop';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex flex-col min-h-screen font-noto-sans">
+    <Providers>
       <Header />
-      <MainWrap>{children}</MainWrap>
+      {children}
       <Footer />
-    </div>
+      <ScrollToTop />
+    </Providers>
   );
 }
