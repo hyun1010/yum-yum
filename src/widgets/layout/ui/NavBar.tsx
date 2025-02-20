@@ -23,7 +23,7 @@ export default function NavBar() {
   };
 
   return (
-    <div>
+    <div className="basis-1/3">
       <button
         onClick={navbarToggleHandler}
         id="navbarToggler"

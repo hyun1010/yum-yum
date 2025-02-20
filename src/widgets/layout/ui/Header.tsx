@@ -28,7 +28,7 @@ export default function Header() {
       className={classNames(
         `header left-0 top-0 z-40 flex w-full items-center`,
         {
-          'fixed z-[9999] bg-white shadow-sticky backdrop-blur-sm transition dark:bg-gray-dark dark:shadow-sticky-dark':
+          'fixed z-50 bg-white shadow-sticky backdrop-blur-sm transition dark:bg-gray-dark dark:shadow-sticky-dark':
             sticky,
         },
         {
@@ -38,9 +38,11 @@ export default function Header() {
     >
       <div className="container">
         <div className="relative -mx-4 flex items-center justify-between">
-          <Logo className="py-6 lg:py-8" />
+          <div className="basis-1/3">
+            <Logo className="py-6 lg:py-8" />
+          </div>
           <NavBar />
-          <div className="items-center justify-center gap-3 hidden lg:flex">
+          <div className="items-center justify-end gap-3 hidden lg:flex basis-1/3">
             <SearchBar />
             <Account />
             <ThemeToggle />
