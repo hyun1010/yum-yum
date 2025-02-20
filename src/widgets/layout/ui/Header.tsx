@@ -1,4 +1,5 @@
 'use client';
+import { SearchBar } from '@/src/features/searchBar';
 import { ThemeToggle } from '@/src/features/themeToggle';
 import { Logo } from '@/src/shared/ui';
 import classNames from 'classnames';
@@ -36,10 +37,13 @@ export default function Header() {
     >
       <div className="container">
         <div className="relative -mx-4 flex items-center justify-between">
-          <Logo />
+          <Logo className="py-6 lg:py-8" />
           <NavBar />
-          <Account />
-          <ThemeToggle />
+          <div className="items-center justify-center gap-3 hidden lg:flex">
+            <SearchBar />
+            <Account />
+            <ThemeToggle />
+          </div>
         </div>
       </div>
     </header>

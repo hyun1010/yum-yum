@@ -1,7 +1,8 @@
-import Link from 'next/link';
-import React, { useState } from 'react';
-import { usePathname } from 'next/navigation';
 import classNames from 'classnames';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useState } from 'react';
+import { HiBars3 } from 'react-icons/hi2';
 import menuData from '../constants/menu';
 
 export default function NavBar() {
@@ -29,24 +30,7 @@ export default function NavBar() {
         aria-label="Mobile Menu"
         className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
       >
-        <span
-          className={classNames(
-            `relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white`,
-            { 'top-[7px] rotate-45': navbarOpen }
-          )}
-        />
-        <span
-          className={classNames(
-            `relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white`,
-            { 'opacity-0': navbarOpen }
-          )}
-        />
-        <span
-          className={classNames(
-            `relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white`,
-            { 'top-[-8px] -rotate-45': navbarOpen }
-          )}
-        />
+        <HiBars3 size={35} />
       </button>
       <nav
         id="navbarCollapse"
