@@ -1,6 +1,4 @@
 import { RoutingButton } from '@/src/features/routingButton';
-import ThemeToggler from '@/src/shared/ui/ThemeToggle';
-import React from 'react';
 
 export default function Account() {
   return (
@@ -17,7 +15,6 @@ export default function Account() {
         label="로그인"
         labelStyle={'text-gray-700 text-md dark:text-white'}
       />
-      <ThemeToggler />
     </div>
   );
 }

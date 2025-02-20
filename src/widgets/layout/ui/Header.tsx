@@ -1,9 +1,10 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { ThemeToggle } from '@/src/features/themeToggle';
 import { Logo } from '@/src/shared/ui';
 import classNames from 'classnames';
-import NavBar from './NavBar';
+import { useEffect, useState } from 'react';
 import Account from './Account';
+import NavBar from './NavBar';
 
 export default function Header() {
   const [sticky, setSticky] = useState(false);
@@ -39,6 +40,7 @@ export default function Header() {
           <div className="flex w-full items-center justify-between px-4">
             <NavBar />
             <Account />
+            <ThemeToggle />
           </div>
         </div>
       </div>
