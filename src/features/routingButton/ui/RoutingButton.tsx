@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import React from 'react';
 import { ClassNameValue, twMerge } from 'tailwind-merge';
 
@@ -46,16 +46,10 @@ export default function RoutingButton({
   labelStyle,
   iconStyle,
 }: RoutingButtogProps) {
-  const router = useRouter();
-
-  const handleClick = () => {
-    router.push(href);
-  };
-
   return (
-    <div
+    <Link
+      href={href}
       className="flex flex-col items-center gap-1 cursor-pointer"
-      onClick={handleClick}
     >
       {type !== 'onlyLabel' && (
         <div
@@ -79,6 +73,6 @@ export default function RoutingButton({
           {label}
         </div>
       )}
-    </div>
+    </Link>
   );
 }

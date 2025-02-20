@@ -9,22 +9,11 @@ const config: Config = {
     },
     screens: {
       xs: '450px',
-      // => @media (min-width: 450px) { ... }
-
       sm: '575px',
-      // => @media (min-width: 576px) { ... }
-
       md: '768px',
-      // => @media (min-width: 768px) { ... }
-
       lg: '992px',
-      // => @media (min-width: 992px) { ... }
-
       xl: '1200px',
-      // => @media (min-width: 1200px) { ... }
-
       '2xl': '1400px',
-      // => @media (min-width: 1400px) { ... }
     },
     extend: {
       colors: {
@@ -33,7 +22,6 @@ const config: Config = {
         white: '#FFFFFF',
         black: '#121723',
         dark: '#1D2430',
-        primary: '#4A6CF7',
         yellow: '#FBB040',
         'body-color': '#788293',
         'body-color-dark': '#959CB1',
@@ -42,7 +30,20 @@ const config: Config = {
         stroke: '#E3E8EF',
         'stroke-dark': '#353943',
         'bg-color-dark': '#171C28',
-        // primary: '#f97316',
+        primary: '#4a6cf7',
+        blue: {
+          '50': '#edf5ff',
+          '100': '#dfecff',
+          '200': '#c4daff',
+          '300': '#a1c1ff',
+          '400': '#7b9efe',
+          '500': '#4a6cf7',
+          '600': '#3e53ed',
+          '700': '#3141d1',
+          '800': '#2a38a9',
+          '900': '#2a3785',
+          '950': '#191f4d',
+        },
         gray: {
           '50': '#fafafa',
           '100': '#efefef',
@@ -57,7 +58,6 @@ const config: Config = {
           '950': '#292929',
         },
       },
-
       boxShadow: {
         signUp: '0px 5px 10px rgba(4, 10, 34, 0.2)',
         one: '0px 2px 3px rgba(7, 7, 77, 0.05)',

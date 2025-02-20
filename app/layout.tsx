@@ -25,7 +25,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body lang="en" className={`${noto_sans.variable} ${do_hyeon.variable}`}>
+      <body
+        lang="en"
+        className={`${noto_sans.variable} ${do_hyeon.variable} font-noto-sans`}
+      >
         <Layout>{children}</Layout>
       </body>
     </html>
