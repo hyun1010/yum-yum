@@ -20,6 +20,7 @@ export default function Header() {
 
   useEffect(() => {
     window.addEventListener('scroll', handleStickyNavbar);
+    return () => window.removeEventListener('scroll', handleStickyNavbar);
   });
 
   return (
