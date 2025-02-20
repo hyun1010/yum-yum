@@ -1,8 +1,8 @@
-import React from 'react';
 import { Providers } from '@/app/providers';
-import { ScrollToTop } from '@/src/shared/ui';
-import Header from './Header';
+import { ScrollTopButton } from '@/src/features/scollTopButton';
+import React from 'react';
 import Footer from './Footer';
+import Header from './Header';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -10,7 +10,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <Header />
       {children}
       <Footer />
-      <ScrollToTop />
+      <ScrollTopButton />
     </Providers>
   );
 }
