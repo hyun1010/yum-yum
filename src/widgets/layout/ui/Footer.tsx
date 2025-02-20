@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-export function Footer() {
+export default function Footer() {
   return (
     <footer
       className="wow fadeInUp relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24"

@@ -6,7 +6,7 @@ import { Logo } from '@/src/shared/ui';
 import classNames from 'classnames';
 import NavBar from './NavBar';
 
-export function Header() {
+export default function Header() {
   const [sticky, setSticky] = useState(false);
 
   const handleStickyNavbar = () => {
