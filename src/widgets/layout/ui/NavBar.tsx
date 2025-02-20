@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { HiBars3 } from 'react-icons/hi2';
-import menuData from '../constants/menu';
+import menuData from '../consts/menu';
 
 export default function NavBar() {
   const usePathName = usePathname();
