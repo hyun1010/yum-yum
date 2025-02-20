@@ -2,11 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+  }
+
+  h2 {
+    @apply text-lg mb-2;
+  }
 }
 
-@media (prefers-color-scheme: dark) {
+@layer components {
+  .card {
+    @apply p-4 rounded-lg border border-gray-50;
+  }
 }
 
-body {
+@layer utilities {
+  .text-base {
+    @apply text-gray-900;
+  }
+
+  .text-brand {
+    @apply text-primary;
+  }
+
+  .text-sub {
+    @apply text-gray-700;
+  }
 }
