@@ -9,13 +9,13 @@ export default function Account() {
         type="onlyLabel"
         href="/signin"
         label="마이페이지"
-        labelStyle={'text-gray-700 text-md'}
+        labelStyle={'text-gray-700 text-md dark:text-white'}
       />
       <RoutingButton
         type="onlyLabel"
         href="/signup"
         label="로그인"
-        labelStyle={'text-gray-700 text-md'}
+        labelStyle={'text-gray-700 text-md dark:text-white'}
       />
       <ThemeToggler />
     </div>
