@@ -1,8 +1,8 @@
 import React from 'react';
 import { Providers } from '@/app/providers';
-import ScrollToTop from '@/components/ScrollToTop';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import { ScrollToTop } from '@/src/shared/ui';
+import { Header } from './Header';
+import { Footer } from './Footer';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
