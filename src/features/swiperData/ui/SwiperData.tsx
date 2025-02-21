@@ -3,16 +3,18 @@ import { Swiper } from '@/src/shared/ui';
 
 interface SwiperDataProps<T> {
   dataUrl: string;
+  dataParams?: object;
   SlideComponent: React.ComponentType<{ item: T }>;
 }
 
 export default function SwiperData<T>({
   dataUrl,
+  dataParams,
   SlideComponent,
 }: SwiperDataProps<T>) {
-  const { data, isLoading, error } = useGetData<T[]>(dataUrl);
+  const { data, isPending, error } = useGetData<T[]>(dataUrl, dataParams);
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isPending) return <div>Loading...</div>;
   if (error) return <div>Error loading data</div>;
 
   return (
