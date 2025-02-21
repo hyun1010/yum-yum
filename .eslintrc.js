@@ -31,7 +31,13 @@ module.exports = {
     sourceType: 'module',
     parser: '@babel/eslint-parser',
   },
-  plugins: ['react', 'react-hooks', 'prettier', '@typescript-eslint'],
+  plugins: [
+    'react',
+    'react-hooks',
+    'prettier',
+    '@typescript-eslint',
+    '@tanstack/query',
+  ],
   rules: {
     'react/react-in-jsx-scope': 0,
     'react/prefer-stateless-function': 0,
