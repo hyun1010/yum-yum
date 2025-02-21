@@ -1,7 +1,12 @@
 import axios, { AxiosRequestConfig, AxiosError } from 'axios';
 
 const serviceKey = process.env.NEXT_PUBLIC_API_SERVICE_KEY;
-
+const defaultParams = {
+  _type: 'json',
+  MobileOS: 'ETC',
+  MobileApp: 'AppTest',
+  serviceKey,
+};
 const api = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL,
   timeout: 5000,
@@ -17,12 +22,14 @@ export const request = async <T>(
   const params = config.params || {};
 
   try {
-    const response = await api({
+    const {
+      data: { response },
+    } = await api({
       ...config,
       url,
-      params: { ...params, serviceKey },
+      params: { ...defaultParams, ...params },
     });
-    return response.data;
+    return response.body.items.item;
   } catch (error) {
     handleAxiosError(error, config.method, url, params);
     throw formatError(error);

@@ -15,7 +15,7 @@ export default function Swiper({ slides }: SwiperProps) {
       autoplay={{
         delay: 2000,
       }}
-      className="w-full h-full rounded-2xl"
+      className="w-full h-full"
     >
       {slides.map((slide, index) => (
         <SwiperSlide key={index}>{slide}</SwiperSlide>

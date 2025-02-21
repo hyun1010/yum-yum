@@ -5,7 +5,7 @@ import React from 'react';
 interface SwiperDataProps<T> {
   dataUrl: string;
   dataParams?: object;
-  slideComponent: (item: T) => React.ReactElement;
+  slideComponent: (item: T, index: number) => React.ReactElement;
 }
 
 export default function SwiperData<T>({
@@ -20,8 +20,10 @@ export default function SwiperData<T>({
 
   return (
     <Swiper
-      slides={(data ?? []).map((item, index) => (
-        <React.Fragment key={index}>{slideComponent(item)}</React.Fragment>
+      slides={(data || [])?.map((item, index) => (
+        <React.Fragment key={index}>
+          {slideComponent(item, index)}
+        </React.Fragment>
       ))}
     />
   );

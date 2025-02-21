@@ -1,6 +1,6 @@
 'use client';
-import { Swiper } from '@/src/shared/ui';
 import Link from 'next/link';
+import ShowCaseSwiper from './ShowCaseSwiper';
 
 export default function ShowCase() {
   return (
@@ -8,7 +8,7 @@ export default function ShowCase() {
       id="home"
       className="dark:bg-gray-dark relative z-10 overflow-hidden bg-white pb-16 pt-[120px] md:pb-[120px] md:pt-[150px]"
     >
-      <div className="container">
+      <div className="container w-screen h-screen">
         <div className="-mx-4 flex flex-wrap justify-center items-center gap-8">
           <div className="grow px-4 max-w-[400px] text-center">
             <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
@@ -32,35 +32,8 @@ export default function ShowCase() {
               </Link>
             </div>
           </div>
-          <div className="w-full max-w-[800px] overflow-hidden">
-            <Swiper
-              slides={[
-                <div
-                  className="bg-blue-200 h-[500px] flex items-center justify-center"
-                  key="1"
-                >
-                  Slide 1
-                </div>,
-                <div
-                  className="bg-green-200 h-[500px] flex items-center justify-center"
-                  key="2"
-                >
-                  Slide 2
-                </div>,
-                <div
-                  className="bg-yellow h-[500px] flex items-center justify-center"
-                  key="3"
-                >
-                  Slide 3
-                </div>,
-                <div
-                  className="bg-red-200 h-[500px] flex items-center justify-center"
-                  key="4"
-                >
-                  Slide 4
-                </div>,
-              ]}
-            />
+          <div className="w-[800px] h-[calc(100vh-300px)] rounded-2xl overflow-hidden">
+            <ShowCaseSwiper />
           </div>
         </div>
       </div>
