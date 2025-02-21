@@ -1,16 +1,17 @@
 import { useGetData } from '@/src/shared/service';
 import { Swiper } from '@/src/shared/ui';
+import React from 'react';
 
 interface SwiperDataProps<T> {
   dataUrl: string;
   dataParams?: object;
-  SlideComponent: React.ComponentType<{ item: T }>;
+  slideComponent: (item: T) => React.ReactElement;
 }
 
 export default function SwiperData<T>({
   dataUrl,
   dataParams,
-  SlideComponent,
+  slideComponent,
 }: SwiperDataProps<T>) {
   const { data, isPending, error } = useGetData<T[]>(dataUrl, dataParams);
 
@@ -20,7 +21,7 @@ export default function SwiperData<T>({
   return (
     <Swiper
       slides={(data ?? []).map((item, index) => (
-        <SlideComponent key={index} item={item} />
+        <React.Fragment key={index}>{slideComponent(item)}</React.Fragment>
       ))}
     />
   );
