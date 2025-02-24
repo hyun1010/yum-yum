@@ -47,7 +47,7 @@ export default function NavBar() {
                 <Link
                   href={menuItem.path}
                   className={classNames(
-                    `flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6`,
+                    `flex py-2 text-black lg:mr-0 lg:inline-flex lg:px-0 lg:py-6`,
                     {
                       'text-primary dark:text-white':
                         usePathName === menuItem.path,

@@ -12,7 +12,7 @@ export default function ShowCaseSwiper() {
         pageNo: 18,
         arrange: 'A',
       }}
-      containerStyle="w-full overflow-hidden h-[calc(100vh-100px)]"
+      containerStyle="w-full overflow-hidden h-full"
       slideComponent={(item) => (
         <div className="w-full h-full flex items-center justify-center gap-8 pt-[90px] px-4 md:px-[50px] lg:px-[200px]">
           <div className="w-full md:w-[500px] h-fit">
@@ -20,6 +20,16 @@ export default function ShowCaseSwiper() {
             <h1 className="w-full truncate text-center md:text-left">
               {item.galTitle}
             </h1>
+
+            <div className="flex w-full items-center justify-center space-x-4">
+              <span className="text-sm font-medium text-gray-600">05 / 11</span>
+              <button className="h-8 w-8 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100">
+                ◀
+              </button>
+              <button className="h-8 w-8 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100">
+                ▶
+              </button>
+            </div>
           </div>
           <div className="relative grow h-[calc(100%-80px)] rounded-md overflow-hidden">
             <Image
