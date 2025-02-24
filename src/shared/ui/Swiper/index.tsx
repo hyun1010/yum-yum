@@ -2,12 +2,14 @@
 import React from 'react';
 import 'swiper/css';
 import { Swiper as ReactSwiper, SwiperSlide } from 'swiper/react';
+import { twMerge } from 'tailwind-merge';
 
 interface SwiperProps {
   slides: React.ReactNode[];
+  containerStyle?: string;
 }
 
-export default function Swiper({ slides }: SwiperProps) {
+export default function Swiper({ slides, containerStyle }: SwiperProps) {
   return (
     <ReactSwiper
       spaceBetween={20}
@@ -15,7 +17,7 @@ export default function Swiper({ slides }: SwiperProps) {
       autoplay={{
         delay: 2000,
       }}
-      className="w-full h-full"
+      className={twMerge('w-full h-full', containerStyle)}
     >
       {slides.map((slide, index) => (
         <SwiperSlide key={index}>{slide}</SwiperSlide>
